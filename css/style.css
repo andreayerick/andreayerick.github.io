@@ -236,7 +236,7 @@ h3 {
 .overlay2::before {
   position: absolute;
   content: "";
-  background-color: #fff;
+  background-color: #000;
   top: 0;
   left: 0;
   width: 100%;
@@ -983,7 +983,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url(../img/banner/Portada.jpeg);
 }
 
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
@@ -1052,7 +1052,7 @@ h3 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #C78665;
+  /* background: #C78665; */
   padding: 126px 55px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1193,7 +1193,7 @@ h3 {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #C78665;
+  /* border: 1px solid #C78665; */
   top: -30px;
   left: -20px;
   z-index: -3;
@@ -1229,7 +1229,7 @@ h3 {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #F2C64D;
+  /* border: 1px solid #F2C64D; */
   top: -30px;
   left: -40px;
   z-index: -3;
@@ -1784,47 +1784,71 @@ h3 {
 
 /* line 37, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_1 {
-  background-image: url(../img/gallery/1.png);
+  background-image: url(../img/gallery/A_J-31.JPG);
 }
 
 /* line 40, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_2 {
-  background-image: url(../img/gallery/2.png);
+  background-image: url(../img/gallery/A_J-51.JPG);
 }
 
 /* line 43, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_3 {
-  background-image: url(../img/gallery/3.png);
+  background-image: url(../img/gallery/A_J-67.JPEG);
 }
 
 /* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_4 {
-  background-image: url(../img/gallery/4.png);
+  background-image: url(../img/gallery/A_J-130.JPEG);
 }
 
 /* line 49, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_5 {
-  background-image: url(../img/gallery/5.png);
+  background-image: url(../img/gallery/A_J-123.jpeg);
 }
 
 /* line 52, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_6 {
-  background-image: url(../img/gallery/6.png);
+  background-image: url(../img/gallery/A_J-134.JPG);
 }
 
 /* line 55, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_7 {
-  background-image: url(../img/gallery/7.png);
+  background-image: url(../img/gallery/A_J-141.jpeg);
 }
 
 /* line 58, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_8 {
-  background-image: url(../img/gallery/8.png);
+  background-image: url(../img/gallery/A_J-197.JPG);
 }
 
 /* line 61, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_9 {
-  background-image: url(../img/gallery/9.png);
+  background-image: url(../img/gallery/A_J-171.JPEG);
+}
+
+.gallery_imag_10 {
+  background-image: url(../img/gallery/A_J-229.JPG);
+}
+
+.gallery_imag_11 {
+  background-image: url(../img/gallery/A_J-234.jpeg);
+}
+
+.gallery_imag_12 {
+  background-image: url(../img/gallery/A_J-237.JPG);
+}
+
+.gallery_imag_13 {
+  background-image: url(../img/gallery/A_J-268.JPG);
+}
+
+.gallery_imag_14 {
+  background-image: url(../img/gallery/Portada.jpeg);
+}
+
+.gallery_imag_15 {
+  background-image: url(../img/gallery/A_J-261.jpeg);
 }
 
 /* line 65, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
@@ -2051,7 +2075,7 @@ h3 {
 
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_bradcam.scss */
 .bradcam_bg_2 {
-  background-image: url(../img/banner/bradcam2.png);
+  /* background-image: url(../img/banner/bradcam2.png); */
 }
 
 /* line 9, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_bradcam.scss */
