@@ -1014,6 +1014,9 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 767px) {
