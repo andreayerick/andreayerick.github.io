@@ -315,24 +315,24 @@
                                         <form action="#">
                                             <div class="row">
                                                 <div class="col-xl-12">
-                                                    <input type="text" placeholder="Nombre">
+                                                    <input id="name" type="text" placeholder="Nombre">
                                                 </div>
                                                 <!-- <div class="col-xl-12">
                                                     <input type="text" placeholder="Correo">
                                                 </div> -->
                                                 <div class="col-xl-12">
-                                                    <select class="form-select wide" id="default-select" class="">
-                                                        <option data-display="1 Invitado">1 Invitado</option>
-                                                        <option value="1">2 Invitados</option>
-                                                        <option value="2">3 Invitados</option>
-                                                        <option value="3">4 Invitados</option>
+                                                    <select id="companion_number" class="form-select wide" class="">
+                                                        <option data-display="1 Acompañante">1 Acompañante</option>
+                                                        <option value="1">2 Acompañantes</option>
+                                                        <option value="2">3 Acompañantes</option>
+                                                        <option value="3">4 Acompañantes</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-xl-12">
-                                                    <textarea placeholder="Incluye el nombre de todos los asistentes"></textarea>
+                                                    <textarea id="companion_names" placeholder="Incluye el nombre de tus acompañantes separados por una coma. Ejemplo: Mariana, Erick, Luis, Andrea"></textarea>
                                                 </div>
                                                 <div class="col-xl-12">
-                                                    <button type="submit" class="boxed_btn3">Confirmar</button>
+                                                    <button type="submit" class="boxed_btn3" onclick="gotowhatsapp()">Confirmar</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -486,6 +486,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyBmzxPSu8zEZDWSh3p47nceqjpqpkK4Gcs">
+    </script>
+
+    <script>
+        function gotowhatsapp() {
+
+            var name = document.getElementById("name").value;
+            var companion_number = document.getElementById("companion_number").value;
+            var companion_names = document.getElementById("companion_names").value;
+
+            var url = "https://wa.me/3331985887?text="
+                + "Confirmo mi asistencia :)" + "%0a"
+                + "%0a"
+                + "Mi Nombre: " + name + "%0a"
+                + "Cantidad acompañantes que llevaré: " + companion_number + "%0a"
+                + "Nombre de mi(s) acompañante(s): " + companion_names;
+
+            window.open(url, '_blank').focus();
+        }
     </script>
 
 
