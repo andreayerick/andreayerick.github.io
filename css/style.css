@@ -1394,6 +1394,7 @@ h3 {
   justify-content: space-evenly;
   padding-bottom: 36px;
   padding-top: 30px;
+  opacity: 0.95
 }
 
 @media (max-width: 767px) {
@@ -1464,6 +1465,7 @@ h3 {
 .program_details_area .single_program .program_inner {
   background: #fff;
   padding: 57px 30px;
+  opacity: 0.95;
 }
 
 /* line 22, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_program.scss */

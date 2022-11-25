@@ -314,22 +314,25 @@
                                         </div>
                                         <form action="#">
                                             <div class="row">
-                                                <div class="col-xl-12">
+                                                <!-- <div class="col-xl-12">
                                                     <input id="name" type="text" placeholder="Nombre">
-                                                </div>
+                                                </div> -->
                                                 <!-- <div class="col-xl-12">
                                                     <input type="text" placeholder="Correo">
                                                 </div> -->
-                                                <div class="col-xl-12">
-                                                    <select id="companion_number" class="form-select wide" class="">
-                                                        <option data-display="1 Acompañante">1 Acompañante</option>
-                                                        <option value="1">2 Acompañantes</option>
-                                                        <option value="2">3 Acompañantes</option>
-                                                        <option value="3">4 Acompañantes</option>
+                                                <div class="col-xl-12 mb-4">
+                                                    <p>Confirma el numero de invitados que asistiran</p>
+                                                    <select id="companion_number" class="form-select wide" class="" onchange="addFields()">
+                                                        <option value="0" data-display="0 acompañantes">0</option>
+                                                        <option value="1" data-display="1 Acompañante">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-xl-12">
-                                                    <textarea id="companion_names" placeholder="Incluye el nombre de tus acompañantes separados por una coma. Ejemplo: Mariana, Erick, Luis, Andrea"></textarea>
+                                                <div id="container_fields" class="col-xl-12">
+                                                    <!-- <textarea id="companion_names" placeholder="Incluye el nombre y apellido de tus acompañantes separados por una coma. Ejemplo: Mariana Perez, Erick Gonzalez, Luis Beckenbauer, Andrea Yalitza"></textarea> -->
                                                 </div>
                                                 <div class="col-xl-12">
                                                     <button type="submit" class="boxed_btn3" onclick="gotowhatsapp()">Confirmar</button>
@@ -492,18 +495,52 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         // https://codingmstr.com/project/source-code-for-link-html-form-data-to-whatsapp-and-whatsapp-floating-button
         function gotowhatsapp() {
 
-            var name = document.getElementById("name").value;
+            // var name = document.getElementById("name").value;
             var companion_number = document.getElementById("companion_number").value;
-            var companion_names = document.getElementById("companion_names").value;
+            // var companion_names = document.getElementById("companion_names").value;
+
+            // var invites_number = container_fields.childElementCount()
+            var invites_elements = document.getElementById('container_fields').children;
+            var invite_names_array = [].slice.call(invites_elements)
+            var invite_names_array_filtered_inputs = invite_names_array.filter(name => name.toString() == '[object HTMLInputElement]')
+            let invites_names_values = []
+
+            for (let i=0; i<companion_number; i++){
+                invites_names_values.push(invite_names_array_filtered_inputs[i].value)
+            }
 
             var url = "https://wa.me/3331985887?text="
                 + "Confirmo mi asistencia :)" + "%0a"
                 + "%0a"
-                + "Mi Nombre: " + name + "%0a"
+                // + "Mi Nombre: " + name + "%0a"
                 + "Cantidad acompañantes que llevaré: " + companion_number + "%0a"
-                + "Nombre de mi(s) acompañante(s): " + companion_names;
+                + "Nombre de mi(s) acompañante(s): " + invites_names_values;
 
             window.open(url, '_blank').focus();
+        }
+    </script>
+
+    <script type='text/javascript'>
+        function addFields(){
+            // Generate a dynamic number of inputs
+            var number = document.getElementById("companion_number").value;
+            // Get the element where the inputs will be added to
+            var container_fields = document.getElementById("container_fields");
+            // Remove every children it had before
+            while (container_fields.hasChildNodes()) {
+                container_fields.removeChild(container_fields.lastChild);
+            }
+            for (i=0;i<number;i++){
+                // Append a node with a random text
+                container_fields.appendChild(document.createTextNode("Invitado " + (i+1) + " (Nombre y Apellido)"));
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "Invitado" + i;
+                container_fields.appendChild(input);
+                // Append a line break 
+                container_fields.appendChild(document.createElement("br"));
+            }
         }
     </script>
 
