@@ -1461,6 +1461,40 @@ h3 {
   background-size: cover;
 }
 
+.codigo_vestimenta-title {
+  text-align: center !important;
+}
+
+.container_vestimenta {
+  /* outline: solid 1px red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_vestimenta img {
+  height: 400px;
+}
+
+
+@media (max-width: 495px) {
+  .container_vestimenta img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container_vestimenta img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container_vestimenta img {
+    height: 200px;
+  }
+}
+
 /* line 18, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_program.scss */
 .program_details_area .single_program .program_inner {
   background: #fff;
@@ -1495,7 +1529,7 @@ h3 {
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
 .attending_area {
   padding-top: 95px;
-  padding-bottom: 280px;
+  padding-bottom: 180px;
 }
 
 /* line 4, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
@@ -1896,7 +1930,7 @@ h3 {
 
 /* line 49, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_5 {
-  background-image: url(../img/gallery/A_J-123.jpeg);
+  background-image: url(../img/gallery/A_J-261.jpeg);
 }
 
 /* line 52, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
